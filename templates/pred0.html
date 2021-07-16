@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stoke Prediction Result</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+  body,h1 {font-family: "Raleway", sans-serif}
+  body, html {height: 100%}
+  body {
+    background-color: #73EA37;
+  }
+  .container {
+    margin-top: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  .center {
+    width: 800px;
+  }
+  
+</style>
+</head>
+<body>
+ <div class="result w3-display-container w3-animate-opacity w3-text-white">
+   <div class = "container">
+    <div>
+      <h1 class="w3-jumbo w3-animate-zoom">{{ prediction_text }}</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+    </div>  
+  </div>
+ </div>
+</body>
+</html>
