@@ -78,7 +78,7 @@
             border-radius: 3px;
         }
         
-        input {
+        input, select {
             width: calc(100% - 10px);
             padding: 5px;
         }
@@ -116,6 +116,7 @@
         .item span {
             color: red;
         }
+        
         
         input[type="date"]::-webkit-inner-spin-button {
             display: none;
@@ -155,11 +156,14 @@
         }
         
         .question span {
-            margin-left: 20px;
+            margin-left: 10px;
+            
         }
         
         .question-answer label {
-            display: block;
+            display: inline-block;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         label.radio:before {
@@ -246,7 +250,12 @@
             <p>Patient Information</p>
             <div class="item">
                 <label for="gender">Gender<span>*</span></label>
-                <input id="gender" type="text" name="gender" required/>
+                <select id="gender" type="text" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Married</option>
+                    <option value="Female">Single</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
             <div class="item">
                 <label for="age">Age<span>*</span></label>
@@ -277,7 +286,7 @@
             <div class="item">
                 <label for="maritalstatus">Marital Status<span>*</span></label>
                 <select id="maritalstatus" name="maritalstatus" required>
-                    <option value="" disabled selected>Select Category</option>
+                    <option value="" disabled selected>Select Status</option>
                     <option value="Yes">Married</option>
                     <option value="No">Single</option>
                 </select>
@@ -286,11 +295,22 @@
 
             <div class="item">
                 <label for="worktype">Work Type<span>*</span></label>
-                <input id="worktype" type="text" name="worktype" required/>
+                <select id="worktype" type="text" name="worktype" required>
+                    <option value="" disabled selected>Select Work Type</option>
+                    <option value="Self-employed">Self Employed</option>
+                    <option value="Private">Private</option>
+                    <option value="Govt_job">Government Job</option>
+                    <option value="Never_worked">Never Worked</option>
+                    <option value="children">Children</option>
+                </select>
             </div>
             <div class="item">
                 <label for="residencetype">Residence Type<span>*</span></label>
-                <input id="residencetype" type="text" name="residencetype" required/>
+                <select id="residencetype" type="text" name="residencetype" required>
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="Rural">Rural</option>
+                    <option value="Urban">Urban</option>
+                </select>
             </div>
             <div class="item">
                 <label for="avgbloodglucose">Avg Glucose Level<span>*</span></label>
@@ -302,7 +322,12 @@
             </div>
             <div class="item">
                 <label for="smokingstatus">Smoking Status<span>*</span></label>
-                <input id="smokingstatus" type="text" name="smokingstatus" required/>
+                <select id="smokingstatus" type="text" name="smokingstatus" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="smokes">Smokes</option>
+                    <option value="formerly smoked">Formerly Smoked</option>
+                    <option value="never smoked">Never Smoked</option>
+                </select>
             </div>
             <!-- <div class="item">
                 <p>Resting ECG</p>
