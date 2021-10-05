@@ -8,7 +8,7 @@ model = pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
 def home():
-    return render_template('haf.html')
+    return render_template('haf2.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -23,9 +23,9 @@ def predict():
     output = prediction
     print(prediction[0])
     if output == 1:
-        return render_template('pred1.html', prediction_text='The chance of stroke is high')
+        return render_template('high.html', prediction_text='The chance of stroke is high')
     else:
-        return render_template('pred0.html', prediction_text='The chance of stroke is low')
+        return render_template('low.html', prediction_text='The chance of stroke is low')
 
 if __name__ == '__main__':
     app.run(debug=True)
