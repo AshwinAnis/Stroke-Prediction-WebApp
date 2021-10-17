@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 import pandas as pd
 import  numpy as np
 import pickle
@@ -6,9 +6,13 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
 
+@app.route("/static/<path:path>")
+def static_dir(path):
+    return send_from_directory("static", path)
+
 @app.route('/')
 def home():
-    return render_template('haf.html')
+    return render_template('haf2.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
